@@ -2,7 +2,7 @@
 
 namespace CandyMarket.Api.Dtos
 {
-    public class AddCandyDto : UserCandy
+    public class AddCandyDto
     {
     }
 }
