@@ -25,7 +25,19 @@ namespace CandyMarket.Api.Repositories
 
         public bool AddCandy(AddCandyDto newCandy)
         {
-            throw new NotImplementedException();
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"INSERT INTO [dbo].[Candy]
+                           ([Name]
+                           ,[Manufacturer]
+                           ,[Category])
+                     VALUES
+                           (@name
+                           ,@manufacturer
+                           ,@category)";
+
+                return db.Execute(sql, newCandy) == 1;
+            }
         }
 
         public bool EatCandy(int candyIdToDelete)

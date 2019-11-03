@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace CandyMarket.Api.DataModels
 {
-    public class UserCandy : Candy
+    public class User
     {
-        public int UserId { get; set; }
-        public DateTime DateReceived { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

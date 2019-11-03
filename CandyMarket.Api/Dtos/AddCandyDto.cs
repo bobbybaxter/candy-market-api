@@ -1,7 +1,8 @@
-﻿namespace CandyMarket.Api.Dtos
+﻿using CandyMarket.Api.DataModels;
+
+namespace CandyMarket.Api.Dtos
 {
-    public class AddCandyDto
+    public class AddCandyDto : UserCandy
     {
-        public string Name { get; set; }
     }
 }
